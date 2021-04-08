@@ -11,6 +11,7 @@
       <element id="extracted-dir" path="$PROJECT_DIR$/lib/generex-1.0.2.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$PROJECT_DIR$/lib/automaton-1.11-8.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$PROJECT_DIR$/lib/opencsv-2.3.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/commons-csv-1.8.jar" path-in-jar="/" />
     </root>
   </artifact>
 </component>
