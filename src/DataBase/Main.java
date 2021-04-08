@@ -56,10 +56,10 @@ public class Main {
 }
 
 class firstThread extends Thread {
-    private String[][] data;
-    private Faker faker;
-    private int n;
-    private String region;
+    protected String[][] data;
+    protected Faker faker;
+    protected int n;
+    protected String region;
     public firstThread(String[][] data, Faker faker,int n, String region){
         this.data = data;
         this.faker = faker;
@@ -77,17 +77,10 @@ class firstThread extends Thread {
         }
     }
 }
-class secondThread extends Thread {
-    private String[][] data;
-    private Faker faker;
-    private int n;
-    private String region;
+class secondThread extends firstThread {
 
     public secondThread(String[][] data, Faker faker,int n, String region){
-        this.data = data;
-        this.faker = faker;
-        this.n = n;
-        this.region = region;
+        super(data,faker, n,region);
     }
 
     public void run() {
@@ -100,17 +93,10 @@ class secondThread extends Thread {
         }
     }
 }
-class thridThread extends Thread {
-    private String[][] data;
-    private Faker faker;
-    private int n;
-    private String region;
+class thridThread extends secondThread {
 
     public thridThread(String[][] data, Faker faker,int n, String region){
-        this.data = data;
-        this.faker = faker;
-        this.n = n;
-        this.region = region;
+        super(data,faker,n,region);
     }
 
     public void run() {
